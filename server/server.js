@@ -38,7 +38,7 @@ if (process.env.NODE_ENV === 'production') {
 
 // Start the server
 db.once('open', () => {
-  app.listen(PORT, () => {
+  app.listen(PORT, '0.0.0.0', () => {
     console.log(`🌍 Now listening on http://localhost:${PORT}`);
     console.log(`🚀 GraphQL available at http://localhost:${PORT}${server.graphqlPath}`);
   });
